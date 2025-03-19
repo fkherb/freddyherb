@@ -30,33 +30,29 @@
       </div>                 
     </nav>
 
-    <div id="container">
-      <div class="inner">
-        <div id="content"> 
-          
-          <!-- About Page -->
-          <div id="about" class="content-region">
-            <h2>About Me</h2>
-            <p>
-              Welcome! I'm Frederick Herb, a passionate professional dedicated to [your field or expertise]. 
-              I specialize in [mention key skills or areas of focus] and strive to [mention your goal or mission]. 
-            </p>
-            <p>
-              With experience in [briefly mention relevant experience], I enjoy solving complex challenges and bringing innovative ideas to life.
-            </p>
-            <a href="resume.pdf" class="download-btn" download>Download My Resume</a>
-          </div>
-          
-          <!-- Contact Page -->
-          <div id="contact" class="content-region">
-            <h2>Contact Information</h2>
-            <p><strong>Phone:</strong> (123) 456-7890</p>
-            <p><strong>Email:</strong> <a href="mailto:frederick.herb@email.com">frederick.herb@email.com</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/frederickherb" target="_blank">linkedin.com/in/frederickherb</a></p>
-          </div>
-          
-        </div>
+    <div id="content"> 
+      
+      <!-- About Page -->
+      <div id="about" class="content-region">
+        <h2>About Me</h2>
+        <p>
+          Welcome! I'm Frederick Herb, a passionate professional dedicated to [your field or expertise]. 
+          I specialize in [mention key skills or areas of focus] and strive to [mention your goal or mission]. 
+        </p>
+        <p>
+          With experience in [briefly mention relevant experience], I enjoy solving complex challenges and bringing innovative ideas to life.
+        </p>
+        <a href="resume.pdf" class="download-btn" download>Download My Resume</a>
       </div>
+      
+      <!-- Contact Page -->
+      <div id="contact" class="content-region">
+        <h2>Contact Information</h2>
+        <p><strong>Phone:</strong> (123) 456-7890</p>
+        <p><strong>Email:</strong> <a href="mailto:frederick.herb@email.com">frederick.herb@email.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/frederickherb" target="_blank">linkedin.com/in/frederickherb</a></p>
+      </div>
+      
     </div>
 
     <footer>  
@@ -81,7 +77,7 @@
         font-family: 'Roboto', sans-serif;
         text-align: center;
         margin: 0;
-        background-color: #f8f9fa00;
+        background-color: #f8f9fa;
       }
 
       /* Centered Navigation Bar */
@@ -134,21 +130,16 @@
       }
 
       /* Content Layout */
-      #container {
+      #content {
         margin-top: 100px; /* Prevent content from being hidden behind the navbar */
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        text-align: center;
       }
 
       .content-region {
         display: none;
-        max-width: 600px;
-        padding: 40px;
-        background: #555;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        text-align: center;
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
       }
 
       .download-btn {
