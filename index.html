@@ -1,41 +1,30 @@
 <!doctype html>
 <html>
   <head>
-    <!-- Page setup -->
     <meta charset="utf-8">
     <title>Frederick Herb</title>
-    <meta name="description" content="A brief description of your site for search engines">
-    <meta name="author" content="Information about the author here">
+    <meta name="description" content="A brief introduction and contact information for Frederick Herb">
+    <meta name="author" content="Frederick Herb">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <link rel="icon" type="image/png" href="favicon.png">
-  
+
     <!-- Stylesheets -->
-    <!-- Reset default styles and add support for google fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
-    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
-   
-    <!-- Custom styles -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
     <link href="style.css" rel="stylesheet" type="text/css" />
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    
-
-    <!-- Want to add Bootstrap? -->
-    <!-- Visit: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
-    
   </head>
   
   <body>
 
     <header id="header">
-      <img src="logo.jpg">
+      <img src="logo.jpg" alt="Frederick Herb Logo">
       <h1>Frederick Herb</h1>
-      
-      <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
       <ul class="main-menu">
-        <li><a href="#home">home</a></li>
-        <li><a href="#about">about</a></li>
-        <li><a href="#contact">contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>                 
     </header>
    
@@ -43,25 +32,25 @@
       <div class="inner">
         <div id="content"> 
           
-          <div id="home" class="content-region hide">
-            <h2>Home</h2>
+          <!-- About Page -->
+          <div id="about" class="content-region">
+            <h2>About Me</h2>
             <p>
-              This is a simple website template published with Github Pages. <a href="https://github.com/cpl-makerlab/simple-website-template">Fork this repository</a> to create your own site!
+              Welcome! I'm Frederick Herb, a passionate professional dedicated to [your field or expertise]. 
+              I specialize in [mention key skills or areas of focus] and strive to [mention your goal or mission]. 
             </p>
+            <p>
+              With experience in [briefly mention relevant experience], I enjoy solving complex challenges and bringing innovative ideas to life.
+            </p>
+            <a href="resume.pdf" class="download-btn" download>Download My Resume</a>
           </div>
           
-          <div id="about" class="content-region hide">
-            <h2>About</h2>
-            <p>
-              Sed tempus urna et pharetra pharetra massa massa ultricies. Porttitor rhoncus dolor purus non enim praesent. Id aliquet risus feugiat in ante metus dictum. 
-            </p>
-          </div>
-          
-          <div id="contact" class="content-region hide">
-            <h2>Contact</h2>
-            <p>
-              Pellentesque nec nam aliquam sem et tortor consequat. Quisque sagittis purus sit amet volutpat consequat. Magna eget est lorem ipsum dolor. 
-            </p>
+          <!-- Contact Page -->
+          <div id="contact" class="content-region">
+            <h2>Contact Information</h2>
+            <p><strong>Phone:</strong> (123) 456-7890</p>
+            <p><strong>Email:</strong> <a href="mailto:frederick.herb@email.com">frederick.herb@email.com</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/frederickherb" target="_blank">linkedin.com/in/frederickherb</a></p>
           </div>
           
         </div>
@@ -69,11 +58,66 @@
     </div>
 
     <footer>  
-      Footer region
+      <p>&copy; 2025 Frederick Herb. All rights reserved.</p>
     </footer>
     
-    <!-- Load additional JS scripts here -->
-    <script type="text/javascript" src="script.js"></script>
+    <!-- JavaScript for simple page navigation -->
+    <script>
+      $(document).ready(function() {
+        $('.main-menu a').click(function(e) {
+          e.preventDefault();
+          var target = $(this).attr('href');
+          $('.content-region').hide();
+          $(target).show();
+        });
+        $('#about').show(); // Show About page by default
+      });
+    </script>
+
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+      }
+      header {
+        background: #333;
+        color: white;
+        padding: 20px;
+      }
+      .main-menu {
+        list-style: none;
+        padding: 0;
+      }
+      .main-menu li {
+        display: inline;
+        margin: 0 15px;
+      }
+      .main-menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+      .content-region {
+        display: none;
+        margin: 50px auto;
+        width: 60%;
+      }
+      .download-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #007BFF;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 20px;
+      }
+      footer {
+        margin-top: 50px;
+        padding: 10px;
+        background: #333;
+        color: white;
+      }
+    </style>
     
   </body>
 </html>
