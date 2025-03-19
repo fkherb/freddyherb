@@ -13,8 +13,7 @@ body {
   font-size: 16px; /* Normal size text */
   line-height: 1.5;
   background-color: #f8f9fa;
-  color: #000000; /* Will show up as white text on darker backgrounds */
-  text-align: center;
+  color: #000000; 
 }
 
 /* --------------------------------- */
@@ -76,12 +75,9 @@ body {
 /* --------------------------------- */
 
 #content {
-  width: 100%;
-  max-width: 900px;
-  margin-top: 180px;
-  margin-bottom: 80px;
+  max-width: 900px;      
+  margin: 180px auto 80px auto; 
   padding: 20px;
-  text-align: center;
 }
 
 /* About (Home) */
@@ -91,7 +87,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
-  text-align: left; /* So paragraphs align left next to the image */
+  text-align: left;
 }
 
 .about-container img {
