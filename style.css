@@ -1,69 +1,68 @@
-/**
- * General Styles
- */
- html, body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px; /* Set base font size to normal */
-  line-height: 1.6;
+/* --------------------------------- */
+/* BASIC TYPOGRAPHY & LAYOUT         */
+/* --------------------------------- */
+
+/* Use a more standard base font size */
+html {
+  font-size: 100%; /* Typically 16px on most browsers */
+}
+body {
   margin: 0;
   padding: 0;
-  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px; /* Normal size text */
+  line-height: 1.5;
   background-color: #f8f9fa;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  color: #ffffff; /* Will show up as white text on darker backgrounds */
+  text-align: center;
 }
 
-/**
- * Navigation Bar (Centered)
- */
+/* --------------------------------- */
+/* NAVBAR                            */
+/* --------------------------------- */
+
 .navbar {
   background: #333;
   color: white;
-  padding: 15px;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: center; /* Centers navbar content */
-  align-items: center;
+  z-index: 999;
+  text-align: center;
+  padding: 10px 0;
 }
 
 .navbar-content {
-  display: flex;
-  align-items: center;
-  gap: 40px;
+  display: inline-block; /* So it centers in the nav */
 }
 
 .site-title a {
   color: white;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
+  margin-right: 40px;
 }
 
-/**
- * Navigation Menu
- */
 .nav-menu {
-  list-style: none;
+  display: inline-block;
+  margin: 0;
   padding: 0;
-  display: flex;
-  gap: 20px;
+  list-style: none;
 }
 
 .nav-menu li {
-  display: inline;
+  display: inline-block;
+  margin: 0 10px;
 }
 
 .nav-menu a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
-  padding: 8px 15px;
-  border-radius: 5px;
+  font-size: 16px;
+  padding: 6px 10px;
+  border-radius: 3px;
   transition: background 0.3s ease;
 }
 
@@ -71,68 +70,56 @@
   background: #555;
 }
 
-/**
- * Main Content
- */
+/* --------------------------------- */
+/* MAIN CONTENT AREA                 */
+/* --------------------------------- */
+
 #content {
-  flex: 1;
   width: 100%;
   max-width: 900px;
-  margin: 100px auto 20px auto;
+  margin: 80px auto 60px auto; /* space for navbar & footer */
   padding: 20px;
   text-align: center;
 }
 
-/**
- * Home Page (About Section)
- */
+/* About (Home) */
 .about-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
-  text-align: left;
+  text-align: left; /* So paragraphs align left next to the image */
 }
 
 .about-container img {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .about-text {
   max-width: 500px;
-  font-size: 16px;
 }
 
-/**
- * Resume Page
- */
+/* Resume Container */
 .resume-container {
   text-align: center;
 }
 
-.resume-container embed {
-  width: 80%;
-  max-width: 800px;
-  height: 1000px;
-}
-
-/**
- * Contact Page
- */
+/* Contact Container */
 .contact-container {
   max-width: 600px;
-  margin: auto;
+  margin: 0 auto;
   text-align: left;
-  font-size: 16px;
+  color: #fff;
 }
 
-/**
- * Buttons
- */
+/* --------------------------------- */
+/* BUTTONS                           */
+/* --------------------------------- */
+
 .download-btn {
   display: inline-block;
   padding: 10px 20px;
@@ -141,16 +128,16 @@
   text-decoration: none;
   border-radius: 5px;
   margin-top: 20px;
-  font-size: 16px;
 }
 
 .download-btn:hover {
   background: #0056b3;
 }
 
-/**
- * Footer (Always at Bottom)
- */
+/* --------------------------------- */
+/* FOOTER                            */
+/* --------------------------------- */
+
 footer {
   background: #333;
   color: white;
@@ -161,3 +148,6 @@ footer {
   bottom: 0;
   left: 0;
 }
+
+/* If you want the footer to be at the bottom *only* when content is short, 
+   and scroll off the page if content is long, remove position:fixed. */

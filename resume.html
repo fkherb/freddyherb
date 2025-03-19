@@ -3,31 +3,42 @@
   <head>
     <meta charset="utf-8">
     <title>Resume - Frederick Herb</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Roboto font + CSS Reset -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <!-- Custom stylesheet -->
+    <link href="style.css" rel="stylesheet">
   </head>
   <body>
 
+    <!-- Navbar -->
     <nav class="navbar">
       <div class="navbar-content">
-        <h1 class="site-title"><a href="index.html">Frederick Herb</a></h1>
+        <h1 class="site-title">
+          <a href="index.html">Frederick Herb</a>
+        </h1>
         <ul class="nav-menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="resume.html">Resume</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-      </div>                 
+      </div>
     </nav>
 
+    <!-- Main Content -->
     <div id="content">
       <h2>My Resume</h2>
       <div class="resume-container">
+        <!-- Embed your PDF or swap with an <iframe> if you prefer -->
         <embed src="resume.pdf" width="800px" height="1100px" />
         <br>
         <a href="resume.pdf" class="download-btn" download>Download My Resume</a>
       </div>
     </div>
 
-    <footer>  
+    <!-- Footer -->
+    <footer>
       <p>&copy; 2025 Frederick Herb. All rights reserved.</p>
     </footer>
 
