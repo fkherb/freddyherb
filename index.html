@@ -78,6 +78,9 @@
         text-align: center;
         margin: 0;
         background-color: #f8f9fa;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
       /* Centered Navigation Bar */
@@ -91,13 +94,13 @@
         left: 0;
         z-index: 1000;
         display: flex;
-        justify-content: center; /* Centers the navbar content */
+        justify-content: center;
       }
 
       .navbar-content {
         display: flex;
         align-items: center;
-        gap: 40px; /* Space between name and menu */
+        gap: 40px;
       }
 
       .site-title {
@@ -131,15 +134,17 @@
 
       /* Content Layout */
       #content {
-        margin-top: 100px; /* Prevent content from being hidden behind the navbar */
+        margin-top: 120px; /* Adjusted to push content down below the navbar */
+        width: 100%;
         text-align: center;
       }
 
       .content-region {
         display: none;
+        width: 80%;
         max-width: 800px;
-        margin: 50px auto;
-        padding: 20px;
+        margin: 20px auto;
+        text-align: center;
       }
 
       .download-btn {
@@ -161,6 +166,7 @@
         padding: 10px;
         background: #333;
         color: white;
+        width: 100%;
       }
     </style>
     
