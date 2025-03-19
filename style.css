@@ -13,7 +13,7 @@ body {
   font-size: 16px; /* Normal size text */
   line-height: 1.5;
   background-color: #f8f9fa;
-  color: #ffffff; /* Will show up as white text on darker backgrounds */
+  color: #000000; /* Will show up as white text on darker backgrounds */
   text-align: center;
 }
 
