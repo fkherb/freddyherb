@@ -11,85 +11,31 @@
     <!-- Stylesheets -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
-    <link href="style.css" rel="stylesheet" type="text/css" />
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    
-  </head>
-  
-  <body>
-
-    <!-- Fixed Navigation Bar -->
-    <nav class="navbar">
-      <div class="navbar-content">
-        <h1 class="site-title">Frederick Herb</h1>
-        <ul class="nav-menu">
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>                 
-    </nav>
-
-    <div id="content"> 
-      
-      <!-- About Page -->
-      <div id="about" class="content-region">
-        <h2>About Me</h2>
-        <p>
-          Welcome! I'm Frederick Herb, a passionate professional dedicated to [your field or expertise]. 
-          I specialize in [mention key skills or areas of focus] and strive to [mention your goal or mission]. 
-        </p>
-        <p>
-          With experience in [briefly mention relevant experience], I enjoy solving complex challenges and bringing innovative ideas to life.
-        </p>
-        <a href="resume.pdf" class="download-btn" download>Download My Resume</a>
-      </div>
-      
-      <!-- Contact Page -->
-      <div id="contact" class="content-region">
-        <h2>Contact Information</h2>
-        <p><strong>Phone:</strong> (123) 456-7890</p>
-        <p><strong>Email:</strong> <a href="mailto:frederick.herb@email.com">frederick.herb@email.com</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/frederickherb" target="_blank">linkedin.com/in/frederickherb</a></p>
-      </div>
-      
-    </div>
-
-    <footer>  
-      <p>&copy; 2025 Frederick Herb. All rights reserved.</p>
-    </footer>
     
-    <!-- JavaScript for simple page navigation -->
-    <script>
-      $(document).ready(function() {
-        $('.nav-menu a').click(function(e) {
-          e.preventDefault();
-          var target = $(this).attr('href');
-          $('.content-region').hide();
-          $(target).show();
-        });
-        $('#about').show(); // Show About page by default
-      });
-    </script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>    
 
     <style>
-      body {
+      /* General Styles */
+      html, body {
         font-family: 'Roboto', sans-serif;
-        text-align: center;
+        font-size: 1.6rem;
         margin: 0;
-        background-color: #335d88; /* BACKGROUND COLOR */
+        padding: 0;
+        text-align: center;
+        background-color: #f8f9fa;
+        height: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
       }
 
-      /* Centered Navigation Bar */
+      /* Navbar */
       .navbar {
         background: #333;
         color: white;
         padding: 15px;
-        position: fixed;
         width: 100%;
+        position: fixed;
         top: 0;
         left: 0;
         z-index: 1000;
@@ -104,7 +50,7 @@
       }
 
       .site-title {
-        font-size: 24px;
+        font-size: 2.4rem;
         margin: 0;
       }
 
@@ -114,7 +60,7 @@
         display: flex;
         gap: 20px;
       }
-      
+
       .nav-menu li {
         display: inline;
       }
@@ -122,7 +68,7 @@
       .nav-menu a {
         color: white;
         text-decoration: none;
-        font-size: 18px;
+        font-size: 1.8rem;
         padding: 8px 15px;
         border-radius: 5px;
         transition: background 0.3s ease;
@@ -132,21 +78,67 @@
         background: #555;
       }
 
-      /* Content Layout */
+      /* Main Content */
       #content {
-        margin-top: 120px; /* Adjusted to push content down below the navbar */
+        flex: 1;
         width: 100%;
+        max-width: 900px;
+        margin: 100px auto 20px auto;
+        padding: 20px;
         text-align: center;
       }
 
       .content-region {
         display: none;
-        width: 80%;
-        max-width: 800px;
-        margin: 20px auto;
+        text-align: center;
+        width: 100%;
+        max-width: 900px;
+        margin: 40px auto;
+      }
+
+      /* Home Page with Image */
+      .about-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        text-align: left;
+      }
+
+      .about-container img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .about-text {
+        max-width: 500px;
+      }
+
+      /* Resume Page */
+      .resume-container {
         text-align: center;
       }
 
+      .resume-preview {
+        width: 80%;
+        max-width: 600px;
+        height: auto;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        margin-bottom: 20px;
+      }
+
+      /* Contact Page */
+      .contact-container {
+        max-width: 600px;
+        margin: auto;
+        text-align: left;
+      }
+
+      /* Button Styles */
       .download-btn {
         display: inline-block;
         padding: 10px 20px;
@@ -161,14 +153,92 @@
         background: #0056b3;
       }
 
+      /* Footer Always at Bottom */
       footer {
-        margin-top: 50px;
-        padding: 10px;
         background: #333;
         color: white;
+        text-align: center;
+        padding: 10px;
         width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
       }
+
     </style>
+  </head>
+  
+  <body>
+
+    <!-- Fixed Navigation Bar -->
+    <nav class="navbar">
+      <div class="navbar-content">
+        <h1 class="site-title">Frederick Herb</h1>
+        <ul class="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>                 
+    </nav>
+
+    <div id="content"> 
+
+      <!-- Home Page (About Me) -->
+      <div id="home" class="content-region">
+        <div class="about-container">
+          <img src="your-photo.jpg" alt="Frederick Herb">
+          <div class="about-text">
+            <h2>About Me</h2>
+            <p>
+              Welcome! I'm Frederick Herb, a passionate professional dedicated to [your field or expertise]. 
+              I specialize in [mention key skills or areas of focus] and strive to [mention your goal or mission]. 
+            </p>
+            <p>
+              With experience in [briefly mention relevant experience], I enjoy solving complex challenges and bringing innovative ideas to life.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resume Page -->
+      <div id="resume" class="content-region">
+        <h2>My Resume</h2>
+        <div class="resume-container">
+          <img src="resume-preview.jpg" alt="Resume Preview" class="resume-preview">
+          <br>
+          <a href="resume.pdf" class="download-btn" download>Download My Resume</a>
+        </div>
+      </div>
+
+      <!-- Contact Page -->
+      <div id="contact" class="content-region">
+        <h2>Contact Information</h2>
+        <div class="contact-container">
+          <p><strong>Phone:</strong> (123) 456-7890</p>
+          <p><strong>Email:</strong> <a href="mailto:frederick.herb@email.com">frederick.herb@email.com</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/frederickherb" target="_blank">linkedin.com/in/frederickherb</a></p>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>  
+      <p>&copy; 2025 Frederick Herb. All rights reserved.</p>
+    </footer>
     
+    <!-- JavaScript for Navigation -->
+    <script>
+      $(document).ready(function() {
+        $('.nav-menu a').click(function(e) {
+          e.preventDefault();
+          var target = $(this).attr('href');
+          $('.content-region').hide();
+          $(target).show();
+        });
+        $('#home').show(); // Show Home page by default
+      });
+    </script>
+
   </body>
 </html>
