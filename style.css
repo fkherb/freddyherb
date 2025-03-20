@@ -41,7 +41,7 @@ body {
    - Column 2 for the nav menu (centered).
 */
 .navbar-content {
-  max-width: 1000px; /* or whatever max width you want for your site */
+  max-width: 2000px; /* or whatever max width you want for your site */
   margin: 0 auto;    /* center the grid container */
   padding: 0 20px;   /* a bit of horizontal padding */
   
