@@ -158,6 +158,3 @@ footer {
   bottom: 0;
   left: 0;
 }
-
-/* If you want the footer to be at the bottom *only* when content is short, 
-   and scroll off the page if content is long, remove position:fixed. */
