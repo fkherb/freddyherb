@@ -86,6 +86,13 @@ body {
   background: #555;
 }
 
+/* Hide the site title on smaller screens if desired */
+@media (max-width: 600px) {
+  .site-title {
+    display: none;
+  }
+}
+
 /* --------------------------------- */
 /* MAIN CONTENT AREA                 */
 /* --------------------------------- */
