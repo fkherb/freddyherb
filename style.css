@@ -28,58 +28,39 @@ body {
   top: 0;
   left: 0;
   z-index: 999;
+  padding: 10px;
   
-  /* Use Flexbox instead of text-align:center + inline-block hacks */
+  /* Use flexbox in row mode with space-between 
+     so the name is on the left & menu is on the right */
   display: flex;
-  justify-content: center; /* horizontally center the .navbar-content */
-  align-items: center;     /* vertically center everything */
-  padding: 10px 0;
-  height: 80px;  /* a more typical nav height (adjust as you like) */
-}
-
-.navbar-content {
-  /* Another flex container so the site title & nav menu line up nicely */
-  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 40px; /* space between site title & menu */
+  height: 60px; /* or whatever height you prefer */
 }
 
-/* Remove the margin-right if it’s pushing the site title off-center */
+/* The site name is on the left */
 .site-title a {
   color: white;
   text-decoration: none;
   font-size: 24px;
   font-weight: bold;
-  /* remove margin-right if it was set */
-  margin-right: 0; 
+  margin-left: 20px;
 }
 
-/* Make the nav menu items horizontal & spaced out */
+/* The nav menu is on the right */
 .nav-menu {
   display: flex;
   gap: 20px;
   list-style: none;
-  margin: 0;
+  margin-right: 20px; 
   padding: 0;
 }
 
-/*
-.nav-menu li {
-  display: inline-block;
-  margin: 0 10px;
-}
-*/
-.nav-menu a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  padding: 6px 10px;
-  border-radius: 3px;
-  transition: background 0.3s ease;
-}
-
-.nav-menu a:hover {
-  background: #555;
+/* Hide the site title on smaller screens (under 600px) */
+@media (max-width: 600px) {
+  .site-title {
+    display: none;
+  }
 }
 
 /* --------------------------------- */
