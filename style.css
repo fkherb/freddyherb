@@ -29,7 +29,7 @@ body {
   top: 0;
   left: 0;
   z-index: 999;
-  height: 60px;      /* adjust if you want a taller nav bar */
+  height: 80px;      /* adjust if you want a taller nav bar */
   margin: 0;
   padding: 0;
 }
@@ -103,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #content {
   max-width: 900px;      
-  margin: 160px auto 80px auto; 
+  margin: 100px auto 80px auto; 
   padding: 20px;
 }
 
