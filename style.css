@@ -5,7 +5,6 @@
 /* Use a more standard base font size */
 html {
   font-size: 100%; /* Typically 16px on most browsers */
-  overflow-y: scroll; /* Force a vertical scrollbar */
 }
 body {
   margin: 0;
@@ -74,6 +73,10 @@ body {
 /* --------------------------------- */
 /* MAIN CONTENT AREA                 */
 /* --------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
 
 #content {
   max-width: 900px;      
