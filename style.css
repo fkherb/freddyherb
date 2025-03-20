@@ -20,49 +20,57 @@ body {
 /* NAVBAR                            */
 /* --------------------------------- */
 
+/* Reset anything old for the navbar */
 .navbar {
   background: #333;
-  color: white;
+  color: #fff;
   width: 100%;
-  position: fixed;
+  position: fixed;  /* stays at the top on scroll */
   top: 0;
   left: 0;
   z-index: 999;
+  /* Some horizontal padding so text isn’t flush with the screen edge */
+  padding: 10px 20px;
 
-  /* Padding on the sides to keep content away from screen edges */
-  padding: 0 20px; 
-  
-  /* Flexbox for left title and right menu */
+  /* The secret sauce: flex container, name on left, menu on right */
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px; /* adjust if you want more or less nav height */
+  justify-content: space-between; 
+  align-items: center;       
+  height: 60px; /* adjust if you want a taller nav bar */
 }
 
-/* Site title on the left (no extra margin needed) */
+/* The site title on the left */
 .site-title a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-size: 24px;
   font-weight: bold;
-  /* Remove margin-left if you had it */
-  margin: 0;
 }
 
-/* Nav menu on the right */
+/* The menu on the right */
 .nav-menu {
+  list-style: none;
   display: flex;
   gap: 20px;
-  list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* Hide the site title on smaller screens if desired */
-@media (max-width: 600px) {
-  .site-title {
-    display: none;
-  }
+.nav-menu li {
+  display: flex;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 3px;
+}
+
+/* Simple hover effect */
+.nav-menu a:hover {
+  background: #555;
 }
 
 /* --------------------------------- */
