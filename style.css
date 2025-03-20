@@ -28,35 +28,37 @@ body {
   top: 0;
   left: 0;
   z-index: 999;
-  padding: 10px;
+
+  /* Padding on the sides to keep content away from screen edges */
+  padding: 0 20px; 
   
-  /* Use flexbox in row mode with space-between 
-     so the name is on the left & menu is on the right */
+  /* Flexbox for left title and right menu */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px; /* or whatever height you prefer */
+  height: 60px; /* adjust if you want more or less nav height */
 }
 
-/* The site name is on the left */
+/* Site title on the left (no extra margin needed) */
 .site-title a {
   color: white;
   text-decoration: none;
   font-size: 24px;
   font-weight: bold;
-  margin-left: 20px;
+  /* Remove margin-left if you had it */
+  margin: 0;
 }
 
-/* The nav menu is on the right */
+/* Nav menu on the right */
 .nav-menu {
   display: flex;
   gap: 20px;
   list-style: none;
-  margin-right: 20px; 
+  margin: 0;
   padding: 0;
 }
 
-/* Hide the site title on smaller screens (under 600px) */
+/* Hide the site title on smaller screens if desired */
 @media (max-width: 600px) {
   .site-title {
     display: none;
