@@ -57,13 +57,13 @@ body {
   font-weight: bold;
 }
 
-/* The menu on the right */
-.nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
+/* Menu links */
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 3px;
 }
 
 .nav-menu li {
