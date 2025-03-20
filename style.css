@@ -87,7 +87,7 @@ body {
 }
 
 /* Hide the site title on smaller screens if desired */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .site-title {
     display: none;
   }
