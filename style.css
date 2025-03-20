@@ -63,11 +63,12 @@ body {
   padding: 0;
 }
 
+/*
 .nav-menu li {
   display: inline-block;
   margin: 0 10px;
 }
-
+*/
 .nav-menu a {
   color: white;
   text-decoration: none;
