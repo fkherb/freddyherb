@@ -20,23 +20,33 @@ body {
 /* NAVBAR                            */
 /* --------------------------------- */
 
-/* Reset anything old for the navbar */
+/* NAVBAR */
 .navbar {
   background: #333;
   color: #fff;
   width: 100%;
-  position: fixed;  /* stays at the top on scroll */
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
-  /* Some horizontal padding so text isn’t flush with the screen edge */
-  padding: 10px 20px;
+  
+  /* Enough vertical space to see name+menu on the same line */
+  height: 60px;  
+  padding: 0 20px; /* keep content away from screen edges */
 
-  /* The secret sauce: flex container, name on left, menu on right */
+  /* Flex row that centers content horizontally */
   display: flex;
-  justify-content: space-between; 
-  align-items: center;       
-  height: 60px; /* adjust if you want a taller nav bar */
+  justify-content: center; 
+  align-items: center;
+}
+
+.navbar-content {
+  /* Another flex container to put name + menu side-by-side */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* Gap between the site name and the menu */
+  gap: 40px; 
 }
 
 /* The site title on the left */
