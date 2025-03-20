@@ -24,32 +24,43 @@ body {
   background: #333;
   color: white;
   width: 100%;
-  height: 140px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
-  text-align: center;
+  
+  /* Use Flexbox instead of text-align:center + inline-block hacks */
+  display: flex;
+  justify-content: center; /* horizontally center the .navbar-content */
+  align-items: center;     /* vertically center everything */
   padding: 10px 0;
+  height: 80px;  /* a more typical nav height (adjust as you like) */
 }
 
 .navbar-content {
-  display: inline-block; /* So it centers in the nav */
+  /* Another flex container so the site title & nav menu line up nicely */
+  display: flex;
+  align-items: center;
+  gap: 40px; /* space between site title & menu */
 }
 
+/* Remove the margin-right if it’s pushing the site title off-center */
 .site-title a {
   color: white;
   text-decoration: none;
   font-size: 24px;
   font-weight: bold;
-  margin-right: 40px;
+  /* remove margin-right if it was set */
+  margin-right: 0; 
 }
 
+/* Make the nav menu items horizontal & spaced out */
 .nav-menu {
-  display: inline-block;
+  display: flex;
+  gap: 20px;
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
 }
 
 .nav-menu li {
