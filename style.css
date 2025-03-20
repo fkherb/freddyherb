@@ -110,13 +110,14 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+/*
 .resume-container embed {
-  display: block;    /* Make it act like a block so margin auto works */
+  display: block;
   margin: 0 auto;
-  max-width: 100%;   /* Shrinks if the screen is smaller than 800px */
-  height: auto;      /* Let height adjust automatically if you prefer */
+  max-width: 100%;
+  height: auto;
 }
-
+*/
 /* Contact Container */
 .contact-container {
   max-width: 600px;
